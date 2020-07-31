@@ -3,14 +3,16 @@
 class TradingCard extends React.Component {
   render() {
     return (
+      
       <div className="card">
         <h2>Name: {this.props.name}</h2>
         <img src={this.props.imgUrl} />
-        <h2>Skill: </h2>
+        <h2>Skill: {this.props.skill} </h2>
       </div>
+      
     );
   }
-}
+};
 
 ReactDOM.render(
   (
@@ -43,4 +45,29 @@ ReactDOM.render(
     />
   ),
   document.querySelector('#llambda')
-);
+  );
+
+  ReactDOM.render(
+    (
+      <TradingCard
+        name="Polymorphism"
+        skill="mutations"
+        imgUrl="/static/img/polymorphism.jpg"
+      />
+    ),
+    document.querySelector('#polymorphism')
+  );
+  
+
+  ReactDOM.render(
+    (
+      <TradingCard
+        name="seedpy"
+        skill="Juicer"
+        imgUrl="/static/img/seedpy.jpg"
+      />
+    ),
+    document.querySelector('#seedpy')
+  );
+  
+
